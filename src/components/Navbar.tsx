@@ -17,6 +17,14 @@ const Navbar = () => {
     setActiveIndex(null);
   };
 
+  const handleLikeCount = () => {
+    setLikeCount(0);
+  };
+
+  const handleCartCount = () => {
+    setCartCount(0);
+  };
+
   return (
     <nav className="bg-appGreen text-white py-5 lg:px-8 px-7 flex justify-between items-center">
       {/* drawer */}
@@ -76,13 +84,19 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div className="relative bg-[#7C9E77] h-11 w-11 hidden md:flex justify-center items-center rounded-full cursor-pointer">
+        <div
+          onClick={handleLikeCount}
+          className="relative bg-[#7C9E77] h-11 w-11 hidden md:flex justify-center items-center rounded-full cursor-pointer"
+        >
           <Icon icon="icon-park-outline:like" className="text-lg" />
           <span className="absolute top-1  bg-white text-appBlack text-xs font-bold rounded-full h-6 w-6 flex justify-center items-center transform translate-x-1/2 -translate-y-1/2">
             {likeCount}{" "}
           </span>
         </div>
-        <div className="relative bg-[#7C9E77] h-11 w-11 flex justify-center items-center rounded-full cursor-pointer">
+        <div
+          onClick={handleCartCount}
+          className="relative bg-[#7C9E77] h-11 w-11 flex justify-center items-center rounded-full cursor-pointer"
+        >
           <Icon icon="solar:bag-4-linear" className="text-lg" />
           <span className="absolute top-1  bg-white text-appBlack text-xs font-bold rounded-full h-6 w-6 flex justify-center items-center transform translate-x-1/2 -translate-y-1/2">
             {cartCount}{" "}
