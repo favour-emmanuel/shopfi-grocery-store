@@ -13,9 +13,9 @@ const Navbar = () => {
     setActiveIndex(index);
   };
 
-  const handleMouseLeave = () => {
-    setActiveIndex(null);
-  };
+  // const handleMouseLeave = () => {
+  //   setActiveIndex(null);
+  // };
 
   const handleLikeCount = () => {
     setLikeCount(0);
@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-appGreen text-white py-5 lg:px-8 px-7 flex justify-between items-center">
+    <nav className="bg-appGreen  text-white py-5 lg:px-8 px-5 flex justify-between items-center">
       {/* drawer */}
       <div className="flex items-center gap-3 cursor-pointer">
         <div className="bg-[#7C9E77] py-2.5 px-3 rounded-md">
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div
             key={index}
             onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
+            // onMouseLeave={handleMouseLeave}
           >
             <Link to={item.path} className="flex items-center gap-1 text-base">
               {item.title}
@@ -56,7 +56,7 @@ const Navbar = () => {
             </Link>
             {item.subMneus && activeIndex === index && (
               <>
-                <div className="absolute top-full  bg-white px-4 py-3 shadow-md  w-52  ease-in-out duration-300">
+                <div className="absolute top-full px-4 py-3 shadow-md bg-white w-52 transition-all  duration-1000">
                   {item.subMneus.map((subItem, index) => (
                     <div
                       key={index}
