@@ -34,7 +34,7 @@ const PopularOnStore = () => {
   };
 
   return (
-    <div className="lg:py-24 py-16 lg:px-16 px-10">
+    <div className="lg:py-24 py-16 lg:px-16 px-6">
       <div className="w-full text-center">
         <h3 className="text-appGreen text-lg my-2">Shop By Category</h3>
         <h1 className="text-5xl font-medium my-3">
@@ -48,8 +48,8 @@ const PopularOnStore = () => {
         swipeable={true}
         customTransition="all .5"
         transitionDuration={500}
-        containerClass="bg-blue-600"
-        itemClass="flex gap-8 w-full bg-red-300"
+        containerClass=""
+        itemClass="flex gap-8 w-full"
       >
         {productCategories.map((Category, index) => (
           <div key={Category.id} className="flex">

@@ -376,3 +376,69 @@ export const productCategories: category[] = [
     ],
   },
 ];
+
+export interface SocialMedia {
+  icon: string;
+  link: string;
+}
+export const socialIcons: SocialMedia[] = [
+  { icon: "uim:facebook-f", link: "" },
+  {
+    icon: "entypo-social:twitter",
+    link: "",
+  },
+  {
+    icon: "bxl:linkedin",
+    link: "",
+  },
+  {
+    icon: "mdi:vimeo",
+    link: "",
+  },
+];
+
+export interface footerItem {
+  label: string;
+  icon?: string;
+}
+
+export interface footerData {
+  title: string;
+  items: footerItem[];
+}
+
+export const footerItems: footerData[] = [
+  {
+    title: "My Account",
+    items: [
+      { label: "My Account" },
+      { label: "Track Orders" },
+      { label: "Shipping" },
+      { label: "Wishlist" },
+      { label: "Order History" },
+      { label: "Returns" },
+    ],
+  },
+
+  {
+    title: "Information",
+    items: [
+      { label: "Our Story" },
+      { label: "Careers" },
+      { label: "Privacy Policy" },
+      { label: "Terms & Condition" },
+      { label: "Latest News" },
+      { label: "Contact" },
+    ],
+  },
+
+  {
+    title: "Talk To Us",
+    items: [
+      { label: "Got Questions ? Call Us" },
+      { icon: "mage:phone-call", label: "+670 412 98 762" },
+      { icon: "iconamoon:email-light", label: "shopfi@yahoo.com" },
+      { icon: "ep:location", label: "Hollow str. Chevron, Lagos 1245" },
+    ],
+  },
+];

@@ -56,7 +56,7 @@ const Navbar = () => {
             </Link>
             {item.subMneus && activeIndex === index && (
               <>
-                <div className="absolute top-full px-4 py-3 shadow-md bg-white w-52 transition-all  duration-1000">
+                <div className="absolute top-full px-4 py-3 shadow-md bg-white w-52 transition-all z-50  duration-1000">
                   {item.subMneus.map((subItem, index) => (
                     <div
                       key={index}

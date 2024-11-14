@@ -12,7 +12,9 @@ const PopularOnStoreCard: FC<PopularOnStoreCardProps> = ({
   bgColor,
 }) => {
   return (
-    <div className={`py-3 w-full flex flex-col items-center ${bgColor}`}>
+    <div
+      className={`py-3 px-2 w-full flex flex-col items-center rounded-xl ${bgColor}`}
+    >
       <h1 className="text-xl font-normal mt-5 hover:text-appGreen hover:duration-300">
         {title}
       </h1>
