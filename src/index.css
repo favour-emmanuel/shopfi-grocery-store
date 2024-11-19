@@ -7,3 +7,11 @@
 body {
   @apply text-appBlack font-jost;
 }
+
+.swiper-scrollbar {
+  @apply !bg-black hover:cursor-pointer hover:!h-1.5 !rounded-none !flex !items-center !justify-center !max-w-3xl;
+}
+
+.custom-swiper-scrollbar {
+  @apply absolute left-1/2 -translate-x-1/2 bottom-4 h-1 w-[30rem] z-50;
+}

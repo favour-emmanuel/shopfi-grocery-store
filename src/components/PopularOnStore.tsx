@@ -1,7 +1,10 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import "react-multi-carousel/lib/styles.css";
+// import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
+
 import { productCategories } from "../data/data";
 import PopularOnStoreCard from "./PopularOnStoreCard";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 
 const PopularOnStore = () => {
   const bgColors = [
@@ -41,26 +44,48 @@ const PopularOnStore = () => {
           Popular on the Shofi store.
         </h1>
       </div>
-
-      <Carousel
-        responsive={responsive}
-        draggable={true}
-        swipeable={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        containerClass=""
-        itemClass="flex gap-8 w-full"
+      <Swiper
+        direction={"horizontal"}
+        freeMode={true}
+        mousewheel={true}
+        scrollbar={{ draggable: true }}
+        spaceBetween={10}
+        // slidesPerView={5}
+        breakpoints={{
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        }}
+        // modules={[FreeMode, Scrollbar, Mousewheel]}
+        className="mySwiper flex justify-center w-full"
       >
         {productCategories.map((Category, index) => (
-          <div key={Category.id} className="flex">
-            <PopularOnStoreCard
-              title={Category.title}
-              image={Category.image}
-              bgColor={bgColors[index % bgColors.length]}
-            />
-          </div>
+          <SwiperSlide>
+            <div
+              key={Category.id}
+              className="flex justify-center w-full mt-9 mb-14"
+            >
+              <PopularOnStoreCard
+                title={Category.title}
+                image={Category.image}
+                bgColor={bgColors[index % bgColors.length]}
+              />
+            </div>
+          </SwiperSlide>
         ))}
-      </Carousel>
+      </Swiper>
     </div>
   );
 };

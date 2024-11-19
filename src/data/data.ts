@@ -442,3 +442,19 @@ export const footerItems: footerData[] = [
     ],
   },
 ];
+
+export interface sideMenuBar {
+  image: string;
+  title: string;
+  id: string;
+  submenus?: { title: string; path: string }[];
+}
+
+export const sideMenuBarData: sideMenuBar[] = [
+  {
+    image: "./product-images/category-1-removebg-preview.png",
+    id: "1",
+    title: "Frozen Foods",
+    submenus: [{ title: "Baby Food", path: "" }],
+  },
+];
