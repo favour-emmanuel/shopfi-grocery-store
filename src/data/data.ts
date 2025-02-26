@@ -447,7 +447,7 @@ export interface sideMenuBar {
   image: string;
   title: string;
   id: string;
-  submenus?: { title: string; path: string }[];
+  submenus?: { title: string }[];
 }
 
 export const sideMenuBarData: sideMenuBar[] = [
@@ -455,6 +455,34 @@ export const sideMenuBarData: sideMenuBar[] = [
     image: "./product-images/category-1-removebg-preview.png",
     id: "1",
     title: "Frozen Foods",
-    submenus: [{ title: "Baby Food", path: "" }],
+    submenus: [{ title: "Baby Food" }, { title: "Strawberry" }],
+  },
+  {
+    image: "./product-images/category-2-removebg-preview.png",
+    id: "2",
+    title: "Meat and Fish",
+    submenus: [{ title: "Meat" }, { title: "Fish" }],
+  },
+  {
+    image: "./product-images/category-3-removebg-preview.png",
+    id: "3",
+    title: "Milk and Diary",
+    submenus: [{ title: "Milk" }, { title: "Diary" }],
+  },
+  {
+    image: "./product-images/category-4-removebg-preview.png",
+    id: "4",
+    title: "Beverages",
+  },
+  {
+    image: "./product-images/category-5-removebg-preview.png",
+    id: "5",
+    title: "Vegetables",
+    submenus: [{ title: "Tomato" }, { title: "Potatoe" }],
+  },
+  {
+    image: "./product-images/category-6-removebg-preview.png",
+    id: "6",
+    title: "Fruits",
   },
 ];
